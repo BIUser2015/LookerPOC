@@ -63,7 +63,12 @@
   - measure: accepted_mv 
     type: sum
     decimals: 2
-    sql: ${oq_merch_grand_total}
+    sql: ${oq_merch_grand_total} 
+    
+  - measure: order
+    type: count_distinct
+    decimals: 0
+    sql: ${oh_order_id} 
     
     
   - measure: count
