@@ -60,6 +60,12 @@
   - dimension: shipping_country
     sql: ${TABLE}.SHIPPING_COUNTRY
 
+  - measure: accepted_mv 
+    type: sum
+    decimals: 2
+    sql: ${oq_merch_grand_total}
+    
+    
   - measure: count
     type: count
     drill_fields: [merch_name]
