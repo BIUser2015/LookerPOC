@@ -4,6 +4,7 @@
 
   - dimension: date_key
     type: int
+    primary_key: true
     sql: ${TABLE}.DATE_KEY
 
   - dimension_group: date_time_end
@@ -12,7 +13,7 @@
     convert_tz: false
     sql: ${TABLE}.DATE_TIME_END
 
-  - dimension_group: date_time_start
+  - dimension_group: start
     type: time
     timeframes: [date, week, month]
     convert_tz: false
