@@ -4,7 +4,7 @@
 - include: "*.dashboard.lookml"  # include all the dashboards
 
 - explore: customer_vdim
-  from: Agg.customer_vdim
+
 
 
 
