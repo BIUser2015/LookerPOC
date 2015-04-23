@@ -7,7 +7,7 @@
     primary_key: true
     sql: ${TABLE}.DATE_KEY
 
-  - dimension_group: date_time_end
+  - dimension_group: period
     type: time
     timeframes: [date, week, month]
     convert_tz: false
