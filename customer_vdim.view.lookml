@@ -1,7 +1,17 @@
 - view: customer_vdim
   sql_table_name: AGG.CUSTOMER_VDIM
   fields:
-
+  
+  - dimension: customer_key
+    type: number
+    primary_key: true
+    sql: ${TABLE}.CUSTOMER_KEY
+  
+  - dimension: customer_history
+    sql: ${customer_key}
+    html: |
+        <a href="/explore/customer_v1/orders?fields=orders.history*&f[orders.customer_key]= {{ value }}">Orders</a>
+    
   - dimension: abandoned_yn
     sql: ${TABLE}.ABANDONED_YN
 
@@ -192,9 +202,7 @@
   - dimension: customer_first_name
     sql: ${TABLE}.CUSTOMER_FIRST_NAME
 
-  - dimension: customer_key
-    type: number
-    sql: ${TABLE}.CUSTOMER_KEY
+
 
   - dimension: customer_last_name
     sql: ${TABLE}.CUSTOMER_LAST_NAME
@@ -361,7 +369,12 @@
 
   - measure: count
     type: count
-    drill_fields: [customer_last_name, customer_first_name]
+    drill_fields: [customer_last_name, customer_first_name, customer_email, customer_history]
+    
+  - measure: mv_lifetime 
+    type: sum
+    sql: ${accepted_mv_usd_lifetime}
+    
     
   
   
