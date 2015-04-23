@@ -3,7 +3,7 @@
   fields:
   
   - dimension: customer_key
-    type: number
+    type: int
     primary_key: true
     sql: ${TABLE}.CUSTOMER_KEY
   

@@ -10,6 +10,9 @@
 
   - dimension: country_code
     sql: ${TABLE}.COUNTRY_CODE
+  
+  - dimension: iso_3
+    sql: ${TABLE}.iso_3
 
   - dimension: country_currency
     sql: ${TABLE}.COUNTRY_CURRENCY

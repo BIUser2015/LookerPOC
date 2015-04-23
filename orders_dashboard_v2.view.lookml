@@ -40,7 +40,7 @@
     sql: ${TABLE}.ORDER_DATE
 
   - dimension: shipping_country
-    sql: ${TABLE}.SHIPPING_COUNTRY
+    sql: UPPER(${TABLE}.SHIPPING_COUNTRY)
     html: |
        {{ linked_value }}
        <a href="/dashboards/2?Country={{ value | encode_uri }}" target="_new">

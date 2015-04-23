@@ -31,7 +31,7 @@
 
     
   - dimension: customer_key
-    type: number
+    type: int
     sql: ${TABLE}.CUSTOMER_KEY
 
   - dimension: oh_credit_card_type

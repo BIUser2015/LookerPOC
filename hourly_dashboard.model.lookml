@@ -9,3 +9,9 @@
     
     - join: merchants
       foreign_key: merch_id
+
+    - join: country
+      from: country_dim
+      sql_on: |
+            ${orders.shipping_country} = ${country.country_name} 
+            AND country.date_to = '2199-12-31'
