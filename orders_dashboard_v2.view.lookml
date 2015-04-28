@@ -84,7 +84,7 @@
     drill_fields: detail*
     
   - measure: aov
-    label: AOV
+    label: aov
     type: number
     sql: ${accepted_mv} / ${count}
     decimals: 2
