@@ -66,6 +66,7 @@
     sql: ${mv} 
     html: |
         ${{ rendered_value }}
+    drill_fields: detail*
     
 
   - measure: accepted_gmv
