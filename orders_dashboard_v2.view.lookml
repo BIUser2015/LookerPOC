@@ -105,7 +105,17 @@
       - credit_card_type
       - accepted_mv
       - accepted_gmv
-      - aov
+      
+  sets: 
+    payment: 
+      - order_created.start_date
+      - oh_order_id
+      - merch_name
+      - checkout_status
+      - credit_card_type
+      - accepted_mv
+      - accepted_gmv
+  
   
   
 
