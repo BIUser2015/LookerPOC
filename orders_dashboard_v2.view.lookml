@@ -66,10 +66,12 @@
     sql: ${mv} 
     html: |
         ${{ rendered_value }}
+    drill_fields: detail*
 
   - measure: accepted_gmv
     type: sum
     sql: ${gmv}
+    drill_fields: detail*
     
   - measure: distinct_orders
     type: count_distinct
@@ -88,6 +90,7 @@
     type: number
     sql: ${accepted_mv} / ${count}
     decimals: 2
+    drill_fields: detail*
   
   - measure: percent_of_total
     type: percent_of_total
