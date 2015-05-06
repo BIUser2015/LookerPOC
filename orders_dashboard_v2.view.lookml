@@ -98,11 +98,14 @@
 
   sets: 
     detail: 
+      - order_created.start_date
       - oh_order_id
       - merch_name
       - checkout_status
-      - order_created.start_date
+      - credit_card_type
       - accepted_mv
+      - accepted_gmv
+      - aov
   
   
 
