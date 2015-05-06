@@ -79,7 +79,7 @@
     decimals: 0
     sql: ${oh_order_id} 
     ## drill fields determines what fields you see on drill down. This is pointing to the detail set
-    drill_fields: detail*
+    drill_fields: merchant*
     
     
   - measure: count
@@ -106,6 +106,10 @@
       - credit_card_type
       - accepted_mv
       - accepted_gmv
+      
+    merchant: 
+    - merch_name
+    - accepted_mv
       
 
   
