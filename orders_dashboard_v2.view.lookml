@@ -72,6 +72,8 @@
   - measure: accepted_gmv
     type: sum
     sql: ${gmv}
+    html: |
+        ${{ rendered_value }}
     drill_fields: detail*
     
   - measure: distinct_orders
