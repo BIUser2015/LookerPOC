@@ -111,6 +111,7 @@
     - merch_name
     - distinct_orders
     - accepted_mv
+    - accepted_gmv
       
 
   
