@@ -4,6 +4,7 @@
 
   - dimension: checkout_status
     sql: ${TABLE}.CHECKOUT_STATUS
+    drill_fields: checkout*
 
   - dimension: credit_card_type
     sql: ${TABLE}.CREDIT_CARD_TYPE
@@ -114,6 +115,13 @@
     - distinct_orders
     - accepted_mv
     - accepted_gmv
+    
+    checkout: 
+    - merch_name
+    - distinct_orders
+    - checkout_status
+    - credit_card_type
+  
       
 
   
