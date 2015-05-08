@@ -94,7 +94,7 @@
     type: number
     sql: ${accepted_mv} / ${count}
     decimals: 2
-    drill_fields: detail*
+    drill_fields: merchant*
   
   - measure: percent_of_total
     type: percent_of_total
@@ -115,6 +115,7 @@
     - distinct_orders
     - accepted_mv
     - accepted_gmv
+    - aov
     
     checkout: 
     - merch_name
