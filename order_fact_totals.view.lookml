@@ -45,7 +45,7 @@
   - measure: total_mv
     label: Total MV
     type: sum
-    value_format: "$#.00"
+    value_format: "$#,##0.00"
     sql: ${oq_merchant_grand_tot_usd_total}
     
   - dimension: oh_created_date_key
